@@ -45,9 +45,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
 
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
-
+  # Use pg as the database for Active Record
+  gem 'pg', '~> 0.21'
+  
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
