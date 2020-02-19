@@ -45,7 +45,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
 
-  # Use pg as the database for Active Record
+  # Use pg as the database for Active Record 
   gem 'pg', '~> 0.21'
   
   # Access an IRB console on exception pages or by using <%= console %> in views
