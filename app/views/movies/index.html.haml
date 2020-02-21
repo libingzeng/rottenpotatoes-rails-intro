@@ -9,7 +9,7 @@
       %th Release Date
       %th More Info
   %tbody
-    - @movies.each do |movie|
+    - @movies.each.order(:title) do |movie|
       %tr
         %td= movie.title
         %td= movie.rating
