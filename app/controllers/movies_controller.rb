@@ -13,6 +13,9 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
+    puts "@moives:------------#{@movies}"
+    puts "@movie_params:------------#{@movie_params}"
+    puts "@movies_path:------------#{@movies_path}"
   end
 
   def new
