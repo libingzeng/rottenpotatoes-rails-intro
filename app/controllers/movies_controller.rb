@@ -12,7 +12,8 @@ class MoviesController < ApplicationController
 
   def index
     #@movies = Movie.all
-    @movies = Movie.order(title: :desc)
+    #@movies = Movie.order(:title) #ascending order
+    @movies = Movie.order(release_date: :desc)#decreasing order
   end
 
   def new
