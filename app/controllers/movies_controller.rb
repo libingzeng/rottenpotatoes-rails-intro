@@ -21,7 +21,6 @@ class MoviesController < ApplicationController
   end
 
   def create
-    debugger
     @movie = Movie.create!(movie_params)
     flash[:notice] = "#{@movie.title} was successfully created."
     redirect_to movies_path
