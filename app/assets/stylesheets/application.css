@@ -27,6 +27,6 @@ table#movies th {
   font-weight: bold;
   background-color: wheat;
 }
-th .hilite {
-  background-color: maroon;
+.hilite {
+  background-color: yellow;
 }
