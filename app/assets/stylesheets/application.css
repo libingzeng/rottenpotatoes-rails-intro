@@ -30,9 +30,10 @@ table#movies th {
 .original {
   font-weight: bold;
   color: maroon;
-}
+  border-bottom: 1px solid black}
 .hilite {
   font-weight: bold;
   color: maroon;
   background-color: yellow;
+  border-bottom: 1px solid black
 }
