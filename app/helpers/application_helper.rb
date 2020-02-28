@@ -1,7 +1,7 @@
 module ApplicationHelper
     
   def sortable(column, title=nil)
-    title ||= column.titleize
+    title ||= column
         
     if column == sort_column && sort_direction == "asc"
       direction = "desc"
