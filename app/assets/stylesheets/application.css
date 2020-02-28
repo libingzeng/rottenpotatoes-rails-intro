@@ -63,7 +63,7 @@ table#movies th, table#movies td {
   padding: 4px;
   text-align: left;
 }
-th .hilite {
+th.hilite {
   background-color: yellow;
 }
 #notice #warning {
