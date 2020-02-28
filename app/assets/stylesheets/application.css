@@ -27,11 +27,11 @@ table#movies th {
   color: DarkSlateGrey;
   background-color: wheat;
 }
-.original {
+th#title_header .original {
   font-weight: bold;
   color: maroon;
   border-bottom: 1px solid maroon}
-.hilite {
+th#title_header .hilite {
   font-weight: bold;
   color: maroon;
   background-color: yellow;
