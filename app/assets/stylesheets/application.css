@@ -22,19 +22,19 @@ h2 {
   font-weight: bold;
   border-bottom: 1px solid black;
 }
-.normal{
+th .normal{
   border: 3px solid white;
   font-weight: bold;
   color: DarkSlateGrey;
   background-color: wheat;
 }
-.original {
+th .original {
   border: 3px solid white;
   font-weight: bold;
   color: maroon;
   background-color: wheat;
   border-bottom: 1px solid maroon}
-.hilite {
+th .hilite {
   border: 2px solid white;
   font-weight: bold;
   color: maroon;
