@@ -23,12 +23,11 @@ h2 {
   border-bottom: 1px solid black;
 }
 table#movies th {
-  border: 1px solid white;
   font-weight: bold;
+  color: DarkSlateGrey;
   background-color: wheat;
 }
 .hilite {
-  border: 1px solid white;
   font-weight: bold;
   background-color: yellow;
 }
