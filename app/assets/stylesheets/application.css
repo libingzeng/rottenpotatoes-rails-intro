@@ -27,6 +27,10 @@ table#movies th {
   color: DarkSlateGrey;
   background-color: wheat;
 }
+.original {
+  font-weight: bold;
+  color: maroon;
+}
 .hilite {
   font-weight: bold;
   color: maroon;
