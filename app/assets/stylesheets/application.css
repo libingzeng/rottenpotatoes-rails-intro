@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-h1 {
+h2 {
   color: maroon;
   font-size: 150%;
   font-style: italic;
@@ -31,6 +31,6 @@ table#movies th {
   font-weight: bold;
   background-color: wheat;
 }
-th.hilite {
+th .hilite {
   background-color: yellow;
 }
