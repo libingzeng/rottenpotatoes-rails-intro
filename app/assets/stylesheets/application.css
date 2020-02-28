@@ -22,16 +22,17 @@ h2 {
   font-weight: bold;
   border-bottom: 1px solid black;
 }
-table#movies th {
+.normal{
   font-weight: bold;
   color: DarkSlateGrey;
   background-color: wheat;
 }
-th#title_header .original {
+.original {
   font-weight: bold;
   color: maroon;
+  background-color: wheat;
   border-bottom: 1px solid maroon}
-th#title_header .hilite {
+.hilite {
   font-weight: bold;
   color: maroon;
   background-color: yellow;
