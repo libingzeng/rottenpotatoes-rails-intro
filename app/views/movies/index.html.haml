@@ -1,19 +1,17 @@
 -#  This file is app/views/movies/index.html.haml
-%h1 All Movies
+%h2 All Movies
 
-= render :partial => "filter"
-
-%table#movies
+%table#movies.table.table-striped.col-md-12
   %thead
     %tr
-      %th= sortable "title", 'Movie Title', @selected_ratings
-      %th= sortable "rating", 'Rating', @selected_ratings
-      %th= sortable "release_date", 'Release Date', @selected_ratings
-      %th= sortable "title", 'More Info', @selected_ratings
+      %th Movie Title
+      %th Rating
+      %th Release Date
+      %th More Info
   %tbody
     - @movies.each do |movie|
       %tr
-        %td= movie.title 
+        %td= movie.title
         %td= movie.rating
         %td= movie.release_date
         %td= link_to "More about #{movie.title}", movie_path(movie)
