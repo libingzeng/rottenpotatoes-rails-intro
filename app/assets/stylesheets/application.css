@@ -19,7 +19,7 @@ h2 {
   font-style: italic;
   display: block;
   width: 100%;
-  border-bottom: 1px solid DarkSlateGrey;
+  font-weight: bold;
 }table#movies {
   margin: 10px;
   border-collapse: collapse;
