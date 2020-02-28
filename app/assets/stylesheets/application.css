@@ -22,7 +22,7 @@ h2 {
   font-weight: bold;
   border-bottom: 1px solid black;
 }
-.normal{
+table#movies th {
   border: 3px solid white;
   font-weight: bold;
   color: DarkSlateGrey;
