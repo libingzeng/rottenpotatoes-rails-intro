@@ -16,7 +16,6 @@ class MoviesController < ApplicationController
     #@movies = Movie.all
     #@movies = Movie.order(:title) #ascending order
     @movies = Movie.order(sort_column + " " + sort_direction)
-    css_class = nil
   end
 
   def new
