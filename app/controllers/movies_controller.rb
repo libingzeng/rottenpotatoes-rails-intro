@@ -44,4 +44,35 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
+
+  private
+
+  def sort_column
+    session[:sort] ||= "title"
+
+    if params.has_key?(:sort)
+      if Movie.column_names.include?(params[:sort])
+        session[:sort] = params[:sort]
+      else
+        session[:sort]
+      end
+    else
+      session[:sort]
+    end
+  end
+
+  def sort_direction
+    session[:direction] ||= "asc"
+
+    if params.has_key?(:direction)
+      if %w[asc desc].include?(params[:direction])
+        session[:direction] = params[:direction]
+      else
+        session[:direction]
+      end
+    else
+      session[:direction]
+    end
+  end
+
 end
