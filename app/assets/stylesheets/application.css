@@ -23,16 +23,19 @@ h2 {
   border-bottom: 1px solid black;
 }
 .normal{
+  border: 2px solid white;
   font-weight: bold;
   color: DarkSlateGrey;
   background-color: wheat;
 }
 .original {
+  border: 2px solid white;
   font-weight: bold;
   color: maroon;
   background-color: wheat;
   border-bottom: 1px solid maroon}
 .hilite {
+  border: 2px solid white;
   font-weight: bold;
   color: maroon;
   background-color: yellow;
