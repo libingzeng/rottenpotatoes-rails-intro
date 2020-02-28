@@ -11,7 +11,7 @@ module ApplicationHelper
     if column == sort_column
       css_class = "hilite"
     else 
-      css_class = nil
+      css_class = "original"
     end
 
     link_to title, {:sort => column, :direction => direction}, {:class => css_class}

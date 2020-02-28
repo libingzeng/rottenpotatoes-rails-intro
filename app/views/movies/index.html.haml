@@ -4,9 +4,9 @@
 %table#movies.table.table-striped.col-md-12
   %thead
     %tr
-      %th#title_header.original= sortable "title", 'Movie Title'
+      %th#title_header.hilite= sortable "title", 'Movie Title'
       %th.normal= 'Rating'
-      %th#release_date_header.original= sortable "release_date", 'Release Date'
+      %th#release_date_header.hilite= sortable "release_date", 'Release Date'
       %th.normal= 'More Info'
   %tbody
     - @movies.each do |movie|
