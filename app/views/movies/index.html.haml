@@ -2,8 +2,8 @@
 %h2 All Movies
 
 %table#movies.table.table-striped.col-md-12
-  %thead.navbar.navbar-expand-lg.bg-primary.text-white
-    %tr
+  %thead
+    %tr.bg-warning
       %th= sortable "title", 'Movie Title'
       %th= sortable "rating", 'Rating'
       %th= sortable "release_date", 'Release Date'
