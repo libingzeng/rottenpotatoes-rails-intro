@@ -29,13 +29,11 @@ table#movies th {
   background-color: wheat;
 }
 .original {
-  border: 3px solid white;
   font-weight: bold;
   color: maroon;
   background-color: wheat;
   border-bottom: 1px solid maroon}
 .hilite {
-  border: 2px solid white;
   font-weight: bold;
   color: maroon;
   background-color: yellow;
