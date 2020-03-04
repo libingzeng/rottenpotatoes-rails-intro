@@ -22,10 +22,10 @@ h2 {
 }
 
 th a {
-    color:maroon; 
-    font-weight: bold;
-    text-decoration: underline;
     background:transparent;
+    color:maroon; 
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 table#movies th.hilite{
@@ -33,7 +33,7 @@ table#movies th.hilite{
 }
 
 #movies th {
-  border: 2px solid white;
-  font-weight: bold;
   background-color: wheat;
+  font-weight: bold;
+  border: 2px solid white;
 }
