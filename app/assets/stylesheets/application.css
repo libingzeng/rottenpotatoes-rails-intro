@@ -14,28 +14,26 @@
  *= require_self
  */
 h2 {
-  color: maroon;
-  font-size: 130%;
-  font-style: italic;
-  display: block;
-  width: 100%;
-  font-weight: bold;
-  border-bottom: 1px solid black;
+    color: maroon;
+    font-style: italic;
+    font-size:150%;
+    font-weight: 800;
+    border-bottom:1px solid Grey;
 }
-table#movies th {
-  border: 3px solid white;
-  font-weight: bold;
-  color: DarkSlateGrey;
-  background-color: wheat;
+
+th a {
+    color:maroon; 
+    font-weight: bold;
+    text-decoration: underline;
+    background:transparent;
 }
-.original {
+
+table#movies th.hilite{
+    background-color:yellow;
+}
+
+#movies th {
+  border: 2px solid white;
   font-weight: bold;
-  color: maroon;
   background-color: wheat;
-  border-bottom: 1px solid maroon}
-.hilite {
-  font-weight: bold;
-  color: maroon;
-  background-color: yellow;
-  border-bottom: 1px solid maroon
 }

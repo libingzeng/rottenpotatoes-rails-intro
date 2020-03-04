@@ -1,7 +1,5 @@
 class MoviesController < ApplicationController
 
-  helper_method :sort_column, :sort_direction
-  
   def movie_params
     params.require(:movie).permit(:title, :rating, :description, :release_date)
   end
@@ -13,10 +11,45 @@ class MoviesController < ApplicationController
   end
 
   def index
-    #@movies = Movie.all
-    #@movies = Movie.order(:title) #ascending order
-    @movies = Movie.order(sort_column + " " + sort_direction)
-  end
+    redirect = false
+    if params[:sort]
+      @sorting = params[:sort]
+    elsif session[:sort]
+      @sorting = session[:sort]
+      redirect = true 
+    end
+    
+    # access ratings from model Movie
+    @all_ratings = Movie.all_ratings
+    if params[:ratings]
+      @ratings = params[:ratings]
+    elsif session[:ratings]
+      @ratings = session[:ratings]
+      redirect = true
+    else
+      @all_ratings.each do |rat|
+        (@ratings ||= { })[rat] = 1
+      end
+      redirect = true
+    end
+    
+    # redirect to /index
+    if redirect
+      redirect_to movies_path(:sort => @sorting, :ratings => @ratings)  
+    end
+    
+    #  access checked item
+    if session[:ratings]
+      @checked_ratings = session[:ratings].keys
+    elsif
+      @checked_ratings = @all_ratings
+    end
+    
+    # Sort By title or release date.
+    @movies = Movie.order(@sorting).where(rating: @checked_ratings)
+  	session[:sort] = @sorting
+  	session[:ratings] = @ratings
+  end   
 
   def new
     # default: render 'new' template
@@ -45,36 +78,6 @@ class MoviesController < ApplicationController
     flash[:notice] = "Movie '#{@movie.title}' deleted."
     redirect_to movies_path
   end
-
-
-  private
-
-  def sort_column
-    session[:sort] ||= "title"
-
-    if params.has_key?(:sort)
-      if Movie.column_names.include?(params[:sort])
-        session[:sort] = params[:sort]
-      else
-        session[:sort]
-      end
-    else
-      session[:sort]
-    end
-  end
-
-  def sort_direction
-    session[:direction] ||= "asc"
-
-    if params.has_key?(:direction)
-      if %w[asc desc].include?(params[:direction])
-        session[:direction] = params[:direction]
-      else
-        session[:direction]
-      end
-    else
-      session[:direction]
-    end
-  end
-
+  
+  
 end
